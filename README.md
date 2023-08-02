@@ -30,27 +30,12 @@ Siga as etapas abaixo para configurar e executar o backend:
 
 ## Configuração do Banco de Dados
 
-Antes de executar o backend, você precisa configurar o banco de dados PostgreSQL. Crie um banco de dados vazio para a aplicação e defina as credenciais de acesso no arquivo `config/database.js`.
+Antes de executar o backend, você precisa configurar o banco de dados PostgreSQL. Crie um banco de dados vazio para a aplicação e defina as credenciais de acesso no arquivo `.env`.
 
-```javascript
-module.exports = {
-  development: {
-    dialect: 'postgres',
-    host: 'localhost',
-    username: 'seu-usuario',
-    password: 'sua-senha',
-    database: 'nome-do-banco-de-dados',
-    define: {
-      timestamps: true,
-      underscored: true,
-      underscoredAll: true,
-    },
-  },
-  // Configurações para outros ambientes (produção, teste, etc.) podem ser adicionadas aqui
-};
-```
+DATABASE_URL="postgres://user:password@host:port/db"
 
-Substitua `seu-usuario`, `sua-senha` e `nome-do-banco-de-dados` pelas credenciais corretas do seu banco de dados PostgreSQL.
+
+Substitua `user`, `password` e `db` pelas credenciais corretas do seu banco de dados PostgreSQL.
 
 ## Executando o backend
 
